@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/const/colors.dart';
 import 'package:portfolio/const/size.dart';
-import 'package:portfolio/ui/pages/widgets/drawer_mobile.dart';
-import 'package:portfolio/ui/pages/widgets/nav_bar_mobile.dart';
-import 'package:portfolio/ui/pages/widgets/nav_bar_desktop.dart';
+import 'package:portfolio/main.dart';
+import 'package:portfolio/models/person_model.dart';
+import 'package:portfolio/models/project_model.dart';
+import 'package:portfolio/ui/widgets/carousel_img.dart';
+import 'package:portfolio/ui/widgets/drawer_mobile.dart';
+import 'package:portfolio/ui/widgets/main_desktop.dart';
+import 'package:portfolio/ui/widgets/main_mobile.dart';
+import 'package:portfolio/ui/widgets/nav_bar_mobile.dart';
+import 'package:portfolio/ui/widgets/nav_bar_desktop.dart';
+import 'package:portfolio/ui/widgets/project_desktop.dart';
+import 'package:portfolio/ui/widgets/project_mobile.dart';
+import 'package:portfolio/ui/widgets/skills_desktop.dart';
+import 'package:portfolio/ui/widgets/skills_mobile.dart';
+import 'package:url_launcher/url_launcher.dart' as launcher;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -61,24 +72,64 @@ class _HomePageState extends State<HomePage> {
                   key: navbarKeys.first,
                 ),
                 // Main
-                Container(
-                  height: 500,
-                  width: double.maxFinite,
-                ),
+                if (constraints.maxWidth >= kMinDesktopWidth)
+                  const MainDesktop()
+                else
+                  const MainMobile(),
 
                 // Skills
                 Container(
                   key: navbarKeys[1],
-                  height: 500,
-                  width: double.maxFinite,
+                  width: screenWidth,
+                  padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
                   color: CustomColor.containerBg3,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // title
+                      const Text(
+                        "Skill & Tools",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.headline,
+                        ),
+                      ),
+                      const SizedBox(height: 30),
+                      // skills
+                      if (constraints.maxWidth >= kMedDesktopWidth)
+                        const SkillsDesktop()
+                      else
+                        const SkillsMobile(),
+                    ],
+                  ),
                 ),
 
                 // Projects
                 Container(
                   key: navbarKeys[2],
-                  height: 500,
-                  width: double.maxFinite,
+                  width: screenWidth,
+                  padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+                  child: Column(
+                    children: [
+                      // Hobby projects title
+                      const Text(
+                        "Projects",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.headline,
+                        ),
+                      ),
+                      const SizedBox(height: 50),
+
+                      // Project Cards
+                      if (constraints.maxWidth >= kMedDesktopWidth)
+                        const ProjectSectionDesktop()
+                      else
+                        const ProjectSectionMobile(),
+                    ],
+                  ),
                 ),
 
                 // Resume
@@ -87,6 +138,21 @@ class _HomePageState extends State<HomePage> {
                   height: 500,
                   width: double.maxFinite,
                   color: CustomColor.containerBg3,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // title
+                      const Text(
+                        "Resume（Coming Soon）",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.headline,
+                        ),
+                      ),
+                      const SizedBox(height: 30),
+                    ],
+                  ),
                 ),
 
                 // Contact
@@ -95,6 +161,21 @@ class _HomePageState extends State<HomePage> {
                   height: 500,
                   width: double.maxFinite,
                   color: CustomColor.containerBg2,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // title
+                      const Text(
+                        "Contacts（Coming Soon）",
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.headline,
+                        ),
+                      ),
+                      const SizedBox(height: 30),
+                    ],
+                  ),
                 ),
               ],
             ),

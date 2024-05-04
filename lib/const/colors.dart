@@ -7,7 +7,6 @@ class CustomColor {
 
   static const Color bgLight1 = Color(0xff3C5B6F);
   static const Color bgLight2 = Color(0xff948979);
-  static const Color textFieldBg = Color(0xfffffffe);
   static const Color button = Color(0xffff8906);
   // static const Color hintDark = Color(0xff666874);
   // static const Color yellowSecondary = Color(0xffFFC25C);

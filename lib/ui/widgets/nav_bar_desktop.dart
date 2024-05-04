@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/const/colors.dart';
 import 'package:portfolio/const/navbar_items.dart';
-import 'package:portfolio/ui/pages/widgets/home_logo.dart';
+import 'package:portfolio/ui/widgets/home_logo.dart';
 
 class HeaderDesktop extends StatelessWidget {
   const HeaderDesktop({
