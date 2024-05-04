@@ -14,8 +14,8 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        # flutter-version: '3.3.10' # 你使用的Flutter版本
-        channel: "stable"
+        flutter-version: '3.16.5' # 你使用的Flutter版本
+        # channel: "stable"
 
     - name: Install dependencies
       run: flutter pub get
@@ -26,7 +26,13 @@ jobs:
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v2
       with:
-        publish-dir: './build/web' # 要部署的目錄
-        github-token: ${{ secrets.GITHUB_TOKEN }} # 會自動添加
-        netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }} # 需要在GitHub Secrets中設置
-        netlify-site-id: ${{ secrets.NETLIFY_SITE_ID }} # 需要在GitHub Secrets中設置
+          publish-dir: "./build/web"
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+      env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
