@@ -1,7 +1,4 @@
 name: Deploy to netlify on merge
-"on":
-  push:
-name: Web Deploy
 on:
   push:
     branches:
