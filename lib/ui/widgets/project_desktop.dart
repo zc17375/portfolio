@@ -22,7 +22,7 @@ class ProjectSectionDesktop extends StatelessWidget {
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 SizedBox(
-                  width: 460, // 容器寬度
+                  width: 400, // 容器寬度
                   height: 360, // 容器高度
                   child: CarouselImg(images: Projects[i].image),
                 ),
@@ -33,7 +33,7 @@ class ProjectSectionDesktop extends StatelessWidget {
                   fit: BoxFit
                       .scaleDown, // 調整方式，這裡使用 BoxFit.scaleDown 表示按比例縮小，以保持原始比例並且不超過給定的範圍
                   child: SizedBox(
-                    width: 460, // 定義容器寬度
+                    width: 400, // 定義容器寬度
                     height: 360, // 定義容器高度
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

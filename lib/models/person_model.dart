@@ -13,7 +13,8 @@ class SnsLinks {
   static const String cv =
       "https://docs.google.com/document/d/1MGeqVMzZyMu7pV_2IK2vMGS2D2fODvTlLMGZGhtHwu8/edit?usp=sharing";
   // static const String facebook = "https://";
-  static const String instagram = "https://";
+  static const String cv_pdf =
+      "https://drive.google.com/file/d/1X_U1Hk_5tDCYxyIB_ttWz2-mQZBf1c-9/view?usp=sharing";
 }
 
 // Email按鈕相關
@@ -95,4 +96,3 @@ const List<Map> skillItems = [
     "title": "Vue",
   }
 ];
-

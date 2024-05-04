@@ -25,8 +25,12 @@ class MainDesktop extends StatelessWidget {
         children: [
           FittedBox(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+
               children: [
+                // const SizedBox(
+                //   width: 800.0,
+                // ),
                 Text(
                   PersonContent.name,
                   style: const TextStyle(
@@ -113,8 +117,8 @@ class MainDesktop extends StatelessWidget {
           ),
           Image.asset(
             "img/avatar.jpg",
-            width: screenWidth / 2,
-            height: MediaQuery.of(context).size.height / 2,
+            // width: screenWidth / 2,
+            height: screenHeight / 2,
           ),
         ],
       ),

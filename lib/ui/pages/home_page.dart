@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:portfolio/const/colors.dart';
 import 'package:portfolio/const/size.dart';
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
     final screenHeight = screenSize.height;
 
     return LayoutBuilder(builder: (context, constraints) {
+      print('屏幕宽度: $screenWidth, 屏幕高度: $screenHeight');
       return Container(
         color: CustomColor.scaffoldBg, // 设置底色为蓝色
         padding: const EdgeInsets.all(10), // 设置 padding 为 10
@@ -123,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       const SizedBox(height: 50),
 
-                      // Project Cards
+                      // Project Section
                       if (constraints.maxWidth >= kMedDesktopWidth)
                         const ProjectSectionDesktop()
                       else
@@ -135,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                 // Resume
                 Container(
                   key: navbarKeys[3],
-                  height: 500,
+                  height: screenHeight / 1.4,
                   width: double.maxFinite,
                   color: CustomColor.containerBg3,
                   child: Column(
@@ -143,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       // title
                       const Text(
-                        "Resume（Coming Soon）",
+                        "Resume",
                         style: TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
@@ -151,6 +153,59 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: 30),
+                      Image.asset(
+                        "img/cv.jpg",
+                        width: screenWidth,
+                        height: screenHeight / 2,
+                      ),
+                      const SizedBox(height: 15),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // ElevatedButton(
+                          //   onPressed: () {
+                          //     // 下載
+                          //     download(SnsLinks.cv_pdf);
+                          //   },
+                          //   style: ElevatedButton.styleFrom(
+                          //     primary: CustomColor.containerBg2, // 背景顏色
+                          //     onPrimary: CustomColor.headline, // 文字顏色
+                          //     padding: const EdgeInsets.symmetric(
+                          //         horizontal: 32, vertical: 16), // 內邊距
+                          //     shape: RoundedRectangleBorder(
+                          //       borderRadius: BorderRadius.circular(10), // 圓角半徑
+                          //       side: BorderSide(color: Colors.black, width: 2),
+                          //     ),
+                          //   ),
+                          //   child: Text(
+                          //     '下載',
+                          //     style: const TextStyle(fontSize: 18),
+                          //   ),
+                          // ),
+                          ElevatedButton(
+                            onPressed: () {
+                              launcher.launchUrl(
+                                Uri.parse(SnsLinks.cv_pdf),
+                                mode: launcher.LaunchMode.externalApplication,
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              primary: CustomColor.containerBg2, // 背景顏色
+                              onPrimary: CustomColor.headline, // 文字顏色
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 32, vertical: 16), // 內邊距
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10), // 圓角半徑
+                                side: BorderSide(color: Colors.black, width: 2),
+                              ),
+                            ),
+                            child: Text(
+                              '線上檢視',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
