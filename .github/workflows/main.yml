@@ -21,7 +21,7 @@ jobs:
       run: flutter pub get
         
     - name: Build Web
-      run: flutter build web
+      run: flutter build web --web-renderer canvaskit --release
         
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v2
