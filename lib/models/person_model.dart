@@ -28,71 +28,71 @@ class Email {
 
 const List<Map> skillItems = [
   {
-    "img": "img/flutter.png",
+    "img": "assets/img/flutter.png",
     "title": "Flutter",
   },
   // {
-  //   "img": "img/dart.png",
+  //   "img": "assets/img/dart.png",
   //   "title": "Dart",
   // },
   {
-    "img": "img/html5.png",
+    "img": "assets/img/html5.png",
     "title": "HTML5",
   },
   {
-    "img": "img/css3.png",
+    "img": "assets/img/css3.png",
     "title": "CSS3",
   },
   {
-    "img": "img/javascript.png",
+    "img": "assets/img/javascript.png",
     "title": "JS",
   },
   {
-    "img": "img/docker.png",
+    "img": "assets/img/docker.png",
     "title": "Docker",
   },
   // {
-  //   "img": "img/python.png",
+  //   "img": "assets/img/python.png",
   //   "title": "Python",
   // },
   {
-    "img": "img/gin.png",
+    "img": "assets/img/gin.png",
     "title": "Gin",
   },
   {
-    "img": "img/git.png",
+    "img": "assets/img/git.png",
     "title": "Git",
   },
   {
-    "img": "img/github.png",
+    "img": "assets/img/github.png",
     "title": "Github",
   },
   {
-    "img": "img/gitlab.png",
+    "img": "assets/img/gitlab.png",
     "title": "Gitlab",
   },
   {
-    "img": "img/golang.png",
+    "img": "assets/img/golang.png",
     "title": "Golang",
   },
   {
-    "img": "img/laravel.png",
+    "img": "assets/img/laravel.png",
     "title": "Laravel",
   },
   {
-    "img": "img/mongodb.png",
+    "img": "assets/img/mongodb.png",
     "title": "Mongodb",
   },
   {
-    "img": "img/mysql.png",
+    "img": "assets/img/mysql.png",
     "title": "Mysql",
   },
   {
-    "img": "img/php.png",
+    "img": "assets/img/php.png",
     "title": "Php",
   },
   {
-    "img": "img/vue.png",
+    "img": "assets/img/vue.png",
     "title": "Vue",
   }
 ];

@@ -26,7 +26,7 @@ class MainMobile extends StatelessWidget {
         children: [
           // avatar img
           Image.asset(
-            "img/avatar.jpg",
+            "assets/img/avatar.jpg",
             width: screenWidth,
             height: screenHeight / 2,
           ),
@@ -76,7 +76,7 @@ class MainMobile extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.github]);
                       },
                       child: Image.asset(
-                        "img/github.png",
+                        "assets/img/github.png",
                         width: 48,
                       ),
                     ),
@@ -87,7 +87,7 @@ class MainMobile extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.linkedIn]);
                       },
                       child: Image.asset(
-                        "img/linkedin.png",
+                        "assets/img/linkedin.png",
                         width: 48,
                       ),
                     ),
@@ -98,7 +98,7 @@ class MainMobile extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.facebook]);
                       },
                       child: Image.asset(
-                        "img/cv.png",
+                        "assets/img/cv.png",
                         width: 48,
                       ),
                     ),
@@ -112,7 +112,7 @@ class MainMobile extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.instagram]);
                       },
                       child: Image.asset(
-                        "img/email.png",
+                        "assets/img/email.png",
                         width: 48,
                       ),
                     ),

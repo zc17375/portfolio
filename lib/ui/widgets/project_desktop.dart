@@ -100,7 +100,7 @@ class ProjectSectionDesktop extends StatelessWidget {
                                   // js.context.callMethod("open", [SnsLinks.github]);
                                 },
                                 child: Image.asset(
-                                  "img/play.png",
+                                  "assets/img/play.png",
                                   width: 48,
                                 ),
                               ),
@@ -114,7 +114,7 @@ class ProjectSectionDesktop extends StatelessWidget {
                                   // js.context.callMethod("open", [SnsLinks.linkedIn]);
                                 },
                                 child: Image.asset(
-                                  "img/github.png",
+                                  "assets/img/github.png",
                                   width: 48,
                                 ),
                               ),

@@ -81,7 +81,7 @@ class MainDesktop extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.linkedIn]);
                       },
                       child: Image.asset(
-                        "./img/linkedin.png",
+                        "assets/img/linkedin.png",
                         width: 48,
                       ),
                     ),
@@ -92,7 +92,7 @@ class MainDesktop extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.facebook]);
                       },
                       child: Image.asset(
-                        "img/cv.png",
+                        "assets/img/cv.png",
                         width: 48,
                       ),
                     ),
@@ -106,7 +106,7 @@ class MainDesktop extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.instagram]);
                       },
                       child: Image.asset(
-                        "img/email.png",
+                        "assets/img/email.png",
                         width: 48,
                       ),
                     ),
@@ -116,7 +116,7 @@ class MainDesktop extends StatelessWidget {
             ),
           ),
           Image.asset(
-            "img/avatar.jpg",
+            "assets/img/avatar.jpg",
             // width: screenWidth / 2,
             height: screenHeight / 2,
           ),

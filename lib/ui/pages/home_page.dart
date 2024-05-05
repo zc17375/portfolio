@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       const SizedBox(height: 30),
                       Image.asset(
-                        "img/cv.jpg",
+                        "assets/img/cv.jpg",
                         width: screenWidth,
                         height: screenHeight / 2,
                       ),

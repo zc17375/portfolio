@@ -20,9 +20,9 @@ class ProjectsModel {
 List<ProjectsModel> Projects = [
   ProjectsModel(
     image: [
-      'img/project1/1.png',
-      'img/project1/2.png',
-      'img/project1/3.png',
+      'assets/img/project1/1.png',
+      'assets/img/project1/2.png',
+      'assets/img/project1/3.png',
     ],
     title: 'Golang Backend Project',
     subtitle:
@@ -32,7 +32,7 @@ List<ProjectsModel> Projects = [
     repo: 'https://github.com/zc17375/e-portfolio-server',
   ),
   ProjectsModel(
-    image: ['img/project2/1.jpg', 'img/project2/2.jpg', 'img/project2/3.jpg'],
+    image: ['assets/img/project2/1.jpg', 'assets/img/project2/2.jpg', 'assets/img/project2/3.jpg'],
     title: 'flutter web Project',
     subtitle:
         '使用Flutter 3.16版本，利用一週時間快速學習並實作一個“個人作品集網站”，且實現響應式網站，相同程式碼同時生成web與app提升跨平台效率．',
