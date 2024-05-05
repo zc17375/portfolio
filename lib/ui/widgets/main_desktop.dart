@@ -70,7 +70,7 @@ class MainDesktop extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.github]);
                       },
                       child: Image.asset(
-                        "img/github.png",
+                        "assets/img/github.png",
                         width: 48,
                       ),
                     ),
