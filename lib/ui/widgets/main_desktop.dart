@@ -81,7 +81,7 @@ class MainDesktop extends StatelessWidget {
                         // js.context.callMethod("open", [SnsLinks.linkedIn]);
                       },
                       child: Image.asset(
-                        "img/linkedin.png",
+                        "./img/linkedin.png",
                         width: 48,
                       ),
                     ),
