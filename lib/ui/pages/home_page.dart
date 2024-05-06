@@ -1,12 +1,9 @@
-import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:portfolio/const/colors.dart';
 import 'package:portfolio/const/size.dart';
-import 'package:portfolio/main.dart';
 import 'package:portfolio/models/person_model.dart';
-import 'package:portfolio/models/project_model.dart';
-import 'package:portfolio/ui/widgets/carousel_img.dart';
 import 'package:portfolio/ui/widgets/drawer_mobile.dart';
+import 'package:portfolio/ui/widgets/footer.dart';
 import 'package:portfolio/ui/widgets/main_desktop.dart';
 import 'package:portfolio/ui/widgets/main_mobile.dart';
 import 'package:portfolio/ui/widgets/nav_bar_mobile.dart';
@@ -210,28 +207,31 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                // Contact
-                Container(
-                  key: navbarKeys[4],
-                  height: 500,
-                  width: double.maxFinite,
-                  color: CustomColor.containerBg2,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      // title
-                      const Text(
-                        "Contacts（Coming Soon）",
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: CustomColor.headline,
-                        ),
-                      ),
-                      const SizedBox(height: 30),
-                    ],
-                  ),
-                ),
+                // // Contact
+                // Container(
+                //   key: navbarKeys[4],
+                //   height: 500,
+                //   width: double.maxFinite,
+                //   color: CustomColor.containerBg2,
+                //   child: Column(
+                //     mainAxisSize: MainAxisSize.min,
+                //     children: [
+                //       // title
+                //       const Text(
+                //         "Contacts（Coming Soon）",
+                //         style: TextStyle(
+                //           fontSize: 32,
+                //           fontWeight: FontWeight.bold,
+                //           color: CustomColor.headline,
+                //         ),
+                //       ),
+                //       const SizedBox(height: 30),
+                //     ],
+                //   ),
+                // ),
+
+                // FOOTER
+                const Footer(),
               ],
             ),
           ),
