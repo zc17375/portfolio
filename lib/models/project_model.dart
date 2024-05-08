@@ -39,7 +39,7 @@ List<ProjectsModel> Projects = [
     ],
     title: 'flutter web Project',
     subtitle:
-        '使用Flutter 3.16版本，利用一週時間快速學習並實作一個“個人作品集網站”，且實現響應式網站，相同程式碼同時生成web與app提升跨平台效率．',
+        '使用Flutter 3.16版本，利用1~2週時間快速學習並實作一個“個人作品集網站”，且實現響應式網站，相同程式碼同時生成web與app提升跨平台效率．使用Github Actions CI/CD to Netlify自動部署．',
     skill: ['flutter', 'dart'],
     demo: 'https://ed-portfolios.netlify.app/',
     repo: 'https://github.com/zc17375/portfolio',
