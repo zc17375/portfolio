@@ -54,7 +54,6 @@ class ProjectSectionDesktop extends StatelessWidget {
                           Projects[i].subtitle,
                           style: const TextStyle(
                             fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
                             color: CustomColor.secondary,
                           ),
                         ),

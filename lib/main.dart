@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        fontFamily: '微軟雅黑', // 设置全局字体
+        brightness: Brightness.dark, // 设置暗模式
+      ),
       title: 'e-portfolio',
       home: const HomePage(),
     );

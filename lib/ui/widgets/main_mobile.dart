@@ -35,7 +35,8 @@ class MainMobile extends StatelessWidget {
           // ),
           FittedBox(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start, // 水平方向對齊
+              mainAxisAlignment: MainAxisAlignment.center, // 垂直方向對齊
               children: [
                 Text(
                   PersonContent.name,

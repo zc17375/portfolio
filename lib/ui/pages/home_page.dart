@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
     final screenHeight = screenSize.height;
 
     return LayoutBuilder(builder: (context, constraints) {
-      print('屏幕宽度: $screenWidth, 屏幕高度: $screenHeight');
+      // print('屏幕宽度: $screenWidth, 屏幕高度: $screenHeight');
       return Container(
         color: CustomColor.scaffoldBg, // 设置底色为蓝色
         padding: const EdgeInsets.all(10), // 设置 padding 为 10

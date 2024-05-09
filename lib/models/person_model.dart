@@ -2,7 +2,7 @@ class PersonContent {
   static const String name = "Edward";
   static const String subTitle = "Software Engineer";
   static const String intro =
-      "  Hi, \n  I'm Edward \n  A Golang and Flutter Developer";
+      "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill";
 }
 
 // 社群按鈕相關
