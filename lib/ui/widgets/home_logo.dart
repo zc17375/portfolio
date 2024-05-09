@@ -21,7 +21,7 @@ class HomeLogo extends StatelessWidget {
         child: Transform.scale(
           scale: 2.0, // 設置縮放比例，此處為兩倍大小
           child: Image.asset(
-            'logo/logo1.png',
+            'assets/logo/logo1.png',
           ),
         ));
   }
