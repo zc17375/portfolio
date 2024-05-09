@@ -2,7 +2,7 @@ class PersonContent {
   static const String name = "Edward";
   static const String subTitle = "Software Engineer";
   static const String intro =
-      "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill";
+      "Success is not final, failure is not fatal,\nIt is the courage to continue that counts.\n- Winston Churchill";
 }
 
 // 社群按鈕相關
