@@ -13,6 +13,7 @@ import 'package:portfolio/ui/widgets/project_mobile.dart';
 import 'package:portfolio/ui/widgets/skills_desktop.dart';
 import 'package:portfolio/ui/widgets/skills_mobile.dart';
 import 'package:url_launcher/url_launcher.dart' as launcher;
+import 'dart:html' as html;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,6 +23,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    _initFloatingButton();
+  }
+
+  // 懸浮按鈕:Back to Top
+  void _initFloatingButton() {
+    html.window.addEventListener('scroll', (_) {
+      final floatingButton = html.document.getElementById('floating-button');
+      if (html.window.pageYOffset > 100) {
+        floatingButton?.style.display = 'block';
+      } else {
+        floatingButton?.style.display = 'none';
+      }
+    });
+  }
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final scrollController = ScrollController();
   final List<GlobalKey> navbarKeys = List.generate(5, (index) => GlobalKey());
@@ -61,6 +80,16 @@ class _HomePageState extends State<HomePage> {
                       scaffoldKey.currentState?.openEndDrawer();
                     },
                   ),
+          ),
+          // 懸浮按鈕
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: CustomColor.scaffoldBg,
+            onPressed: () {
+              scrollToSection(0);
+            },
+            child: const Icon(
+              Icons.arrow_upward,
+            ),
           ),
           body: SingleChildScrollView(
             controller: scrollController,
@@ -234,6 +263,22 @@ class _HomePageState extends State<HomePage> {
 
                 // FOOTER
                 const Footer(),
+
+                // back to Top button
+                SafeArea(
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: FloatingActionButton(
+                        onPressed: () {
+                          scrollToSection(0);
+                        },
+                        child: Icon(Icons.vertical_align_top),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -242,6 +287,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  // 滑動到Section
   void scrollToSection(int navIndex) {
     final key = navbarKeys[navIndex];
     Scrollable.ensureVisible(

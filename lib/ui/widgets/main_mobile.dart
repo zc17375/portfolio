@@ -16,7 +16,7 @@ class MainMobile extends StatelessWidget {
         horizontal: 40.0,
         vertical: 30.0,
       ),
-      height: screenHeight,
+      height: screenHeight / 1.2,
       constraints: const BoxConstraints(
         minHeight: 600.0,
       ),
@@ -28,7 +28,7 @@ class MainMobile extends StatelessWidget {
           Image.asset(
             "assets/img/avatar.jpg",
             width: screenWidth,
-            height: screenHeight / 2,
+            height: screenHeight / 2.5,
           ),
           // const SizedBox(
           //   height: 20,
