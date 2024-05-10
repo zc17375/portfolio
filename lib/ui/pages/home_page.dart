@@ -263,22 +263,6 @@ class _HomePageState extends State<HomePage> {
 
                 // FOOTER
                 const Footer(),
-
-                // back to Top button
-                SafeArea(
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: FloatingActionButton(
-                        onPressed: () {
-                          scrollToSection(0);
-                        },
-                        child: Icon(Icons.vertical_align_top),
-                      ),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),
