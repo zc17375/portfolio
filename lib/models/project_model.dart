@@ -44,6 +44,18 @@ List<ProjectsModel> Projects = [
     demo: 'https://ed-portfolios.netlify.app/',
     repo: 'https://github.com/zc17375/portfolio',
   ),
+  ProjectsModel(
+    image: [
+      'assets/img/project3/1.jpg',
+      'assets/img/project3/2.jpg',
+    ],
+    title: 'JoinIt電商平台',
+    subtitle:
+        '使用php laravel + Eloquent ORM 開發電商平台，負責後端RESTful API設計和開發系統的核心功能。主要開發功能:用戶註冊、oAuth2.0、商品系統、訂單系統、金流服務、發票系統..等核心功能。',
+    skill: ['php', 'laravel', 'orm', 'mysql', 'swagger'],
+    demo: '',
+    repo: '',
+  ),
   // ProjectsModel(
   //   image: ['img/projects/project1.png'],
   //   title: 'English Learning App',
